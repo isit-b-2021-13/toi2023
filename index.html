@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ВАЛИДАТОРЫ КОДА И ПОИСК ОШИБОК</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>ВАЛИДАТОРЫ КОДА И ПОИСК ОШИБОК</span>
+    </div>
+    <div id="about">
+      <a href="#" title="БЛОГ" onclick="slowScroll('#main')">БЛОГ</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="КОНТАКТЫ">КОНТАКТЫ</a>
+      <a href="#" onclick="slowScroll('#faq')" title="ОТВЕТЫ НА ВОПРОСЫ">ОТВЕТЫ НА ВОПРОСЫ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Что такое</h1>
+    <h3>валидность кода?</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Как проверить CSS и HTML-код на валидность</h2>
+      <span>И зачем это нужно</span>
+    </div>
+    <div class="text">
+      <span>Разберем, насколько критическими для работы сайта и его продвижения могут быть ошибки в HTML-коде, и зачем нужны общие стандарты верстки</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Блог</h2>
+    <h4>Валидность кода и ошибки</h4>
+
+    <div class="img">
+      <img src="https://avatars.mds.yandex.net/i?id=11b9e7c82fdbbcd388d39582bded641e3d5f95f4-10879773-images-thumbs&n=13" alt="">
+      <span>Что такое валидность кода</span>
+    </div>
+    <div class="img">
+      <img src="https://avatars.mds.yandex.net/i?id=7afc6f7a39a19bde17d4683b6214f4ff52fdff49-10919913-images-thumbs&n=13" alt="">
+      <span>Как проверить код на валидность</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Тема вопроса</span><br>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+    </div>
+    <div>
+      <span class="title">Тема вопроса</span><br>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+    </div>
+    <div>
+      <span class="title">Тема вопроса</span><br>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+      <span class="heading">Вопрос</span>
+      <p>Ответ на вопрос</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
